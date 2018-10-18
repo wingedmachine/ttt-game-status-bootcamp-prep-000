@@ -17,6 +17,6 @@ WIN_COMBINATIONS = [
 
 def won?(board)
   WIN_COMBINATIONS.detect do |line|
-    line[0] != " " && line.all? { |space| board[line[0]] == board[space] }
+    board[line[0]] != " " && line.all? { |space| board[line[0]] == board[space] }
   end
 end
