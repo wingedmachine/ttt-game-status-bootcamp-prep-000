@@ -20,3 +20,7 @@ def won?(board)
     board[line[0]] != " " && line.all? { |space| board[line[0]] == board[space] }
   end
 end
+
+def full?(board)
+  !board.any? { |space| space == " " }
+end
