@@ -16,7 +16,7 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  WIN_COMBINATIONS.each do |combination|
+  WIN_COMBINATIONS.any? do |combination|
     combination.all? do |space|
       board[combination[0]] == board[space]
     end
