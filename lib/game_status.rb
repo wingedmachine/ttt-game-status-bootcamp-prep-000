@@ -32,3 +32,12 @@ end
 def over?(board)
   won?(board) || draw?(board)
 end
+
+def winner(board)
+  winning_line = won?(board)
+  if winning_line
+    return board[winning_line[0]]
+  else
+    return
+  end
+end
